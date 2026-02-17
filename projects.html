@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects | GK Interiors</title>
+    <meta name="description" content="Explore our portfolio of luxury interior design projects.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid #333;
+            color: #888;
+            padding: 8px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+        }
+
+        .project-item {
+            display: block;
+            /* Default display */
+        }
+
+        .project-item.hidden {
+            display: none;
+        }
+
+        /* Hide project titles and locations */
+        .project-info {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header (Same as index) -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="GK Interiors" class="logo-img">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="https://wa.me/918590428136?text=Hi, I am interested in a free consultation."
+                class="btn btn-gold header-cta" target="_blank">Get Free Consultation</a>
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <button class="mobile-close" aria-label="Close Menu">&times;</button>
+        <ul class="mobile-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header section-padding" style="padding-top: 150px; padding-bottom: 50px; text-align: center;">
+        <div class="container">
+            <h1 class="page-title">Our Projects</h1>
+            <p class="page-subtitle">A showcase of our finest work across residential and commercial spaces.</p>
+        </div>
+    </section>
+
+    <!-- Projects Gallery -->
+    <section class="projects-gallery section-padding">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ceiling">Ceiling</button>
+                <button class="filter-btn" data-filter="kitchen">Modular Kitchen</button>
+                <button class="filter-btn" data-filter="bedroom">Bedroom</button>
+                <button class="filter-btn" data-filter="living">Living Room</button>
+                <button class="filter-btn" data-filter="wardrobe">Wardrobe</button>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+
+                <!-- FEATURED ITEMS (Show in 'All') -->
+
+                <!-- Kitchen Featured 1 -->
+                <div class="project-card project-item" data-category="kitchen" data-featured="true">
+                    <div class="project-image">
+                        <img src="kitchen1.jpg" alt="Modern Kitchen Design" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Modern Kitchen Design</h3>
+                        <p>Kochi, Kerala</p>
+                    </div>
+                </div>
+
+                <!-- Living Featured 1 -->
+                <div class="project-card project-item" data-category="living" data-featured="true">
+                    <div class="project-image">
+                        <img src="livingmain.jpg" alt="Modern Living Room" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Minimalist Living Room</h3>
+                        <p>Bangalore, Karnataka</p>
+                    </div>
+                </div>
+
+                <!-- Bedroom Featured 1 -->
+                <div class="project-card project-item" data-category="bedroom" data-featured="true">
+                    <div class="project-image">
+                        <img src="bedroom1.jpg" alt="Luxury Master Suite" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Master Bedroom Suite</h3>
+                        <p>Mumbai, Maharashtra</p>
+                    </div>
+                </div>
+
+                <!-- Wardrobe Featured 1 -->
+                <div class="project-card project-item" data-category="wardrobe" data-featured="true">
+                    <div class="project-image">
+                        <img src="wardrobe1.jpg" alt="Glass Wardrobe" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Glass Wardrobe</h3>
+                        <p>Delhi, NCR</p>
+                    </div>
+                </div>
+
+
+                <!-- Ceiling Featured 1 -->
+                <div class="project-card project-item" data-category="ceiling" data-featured="true">
+                    <div class="project-image">
+                        <img src="false.jpg" alt="Ceiling Design" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Ceiling Design</h3>
+                        <p>Premium Ceiling</p>
+                    </div>
+                </div>
+
+                <!-- Full Home Featured 1 -->
+                <!-- Full Home Item 1 -->
+                <div class="project-card project-item" data-category="fullhome">
+                    <div class="project-image">
+                        <img src="https://placehold.co/600x500/333/FFF?text=Luxury+Villa+Project"
+                            alt="Luxury Villa Project" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Penthouse Interior</h3>
+                        <p>Mumbai, Maharashtra</p>
+                    </div>
+                </div>
+
+
+
+                <!-- EXTRA CATEGORY ITEMS (Hidden in 'All') -->
+
+                <!-- Extra Kitchens -->
+                <div class="project-card project-item" data-category="kitchen">
+                    <div class="project-image">
+                        <img src="kitchen2.jpg" alt="Luxury Modular Kitchen" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Luxury Modular Kitchen</h3>
+                        <p>Coorg, Karnataka</p>
+                    </div>
+                </div>
+                <div class="project-card project-item" data-category="kitchen">
+                    <div class="project-image">
+                        <img src="kitchen3.jpg" alt="Contemporary Kitchen Space" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Contemporary Kitchen Space</h3>
+                        <p>Chennai, Tamil Nadu</p>
+                    </div>
+                </div>
+
+
+                <!-- Extra Bedrooms -->
+                <div class="project-card project-item" data-category="bedroom">
+                    <div class="project-image">
+                        <img src="bedroom2.jpg" alt="Kids Playful Bedroom" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Kids Playful Bedroom</h3>
+                        <p>Bangalore, Karnataka</p>
+                    </div>
+                </div>
+                <div class="project-card project-item" data-category="bedroom">
+                    <div class="project-image">
+                        <img src="bedroom3.jpg" alt="Guest Room Design" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Guest Room Design</h3>
+                        <p>Kochi, Kerala</p>
+                    </div>
+                </div>
+
+                <!-- Extra Bedroom 3 -->
+                <div class="project-card project-item" data-category="bedroom">
+                    <div class="project-image">
+                        <img src="bedroom4.jpg" alt="Contemporary Bedroom" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Contemporary Bedroom</h3>
+                        <p>Delhi, NCR</p>
+                    </div>
+                </div>
+
+                <!-- Extra Living Rooms -->
+                <div class="project-card project-item" data-category="living">
+                    <div class="project-image">
+                        <img src="living1.jpg" alt="Modern Living Room" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Scandi Style Living</h3>
+                        <p>Coorg, Karnataka</p>
+                    </div>
+                </div>
+                <div class="project-card project-item" data-category="living">
+                    <div class="project-image">
+                        <img src="living2.jpg" alt="Luxury Living Room" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Luxury Penthouse Lounge</h3>
+                        <p>Hyderabad, Telangana</p>
+                    </div>
+                </div>
+
+                <!-- Extra Living Room 3 -->
+                <div class="project-card project-item" data-category="living">
+                    <div class="project-image">
+                        <img src="living3.jpg" alt="Contemporary Living Room" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Contemporary Living Room</h3>
+                        <p>Modern Design</p>
+                    </div>
+                </div>
+
+                <!-- Extra Ceilings -->
+                <div class="project-card project-item" data-category="ceiling">
+                    <div class="project-image">
+                        <img src="false1.jpg" alt="Modern Ceiling" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Modern Ceiling</h3>
+                        <p>Contemporary Design</p>
+                    </div>
+                </div>
+                <div class="project-card project-item" data-category="ceiling">
+                    <div class="project-image">
+                        <img src="false2.jpg" alt="Luxury Ceiling" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Luxury Ceiling</h3>
+                        <p>Premium Finish</p>
+                    </div>
+                </div>
+                <div class="project-card project-item" data-category="ceiling">
+                    <div class="project-image">
+                        <img src="false3.jpg" alt="Designer Ceiling" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Designer Ceiling</h3>
+                        <p>Elegant Style</p>
+                    </div>
+                </div>
+
+                <!-- Extra Wardrobes -->
+                <div class="project-card project-item" data-category="wardrobe">
+                    <div class="project-image">
+                        <img src="wardrobe3.jpg" alt="Sliding Wardrobe" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Sliding Wardrobe</h3>
+                        <p>Mumbai, Maharashtra</p>
+                    </div>
+                </div>
+                <div class="project-card project-item" data-category="wardrobe">
+                    <div class="project-image">
+                        <img src="wardrobe4.jpg" alt="Corner Wardrobe" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Corner Wardrobe</h3>
+                        <p>Pune, Maharashtra</p>
+                    </div>
+                </div>
+
+
+                <!-- Extra Full Home -->
+                <div class="project-card project-item" data-category="fullhome">
+                    <div class="project-image">
+                        <img src="https://placehold.co/600x500/333/FFF?text=Modern+3BHK+Apartment"
+                            alt="Modern 3BHK Apartment" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Modern 3BHK Apartment</h3>
+                        <p>Mumbai, Maharashtra</p>
+                    </div>
+                </div>
+                <div class="project-card project-item" data-category="fullhome">
+                    <div class="project-image">
+                        <img src="https://placehold.co/600x500/333/FFF?text=Traditional+Kerala+Home"
+                            alt="Traditional Kerala Home" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Traditional Kerala Home</h3>
+                        <p>Trivandrum, Kerala</p>
+                    </div>
+                </div>
+                <div class="project-card project-item" data-category="fullhome">
+                    <div class="project-image">
+                        <img src="https://placehold.co/600x500/333/FFF?text=Contemporary+Duplex"
+                            alt="Contemporary Duplex" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Contemporary Duplex</h3>
+                        <p>Bangalore, Karnataka</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index) -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>
+                    <a href="index.html" class="logo">
+                        <img src="logo.png" alt="GK Interiors" class="logo-img">
+                    </a>
+                </h3>
+                <p>Creating timeless spaces that reflect your personality. Your dream, our execution.</p>
+
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="services.html">Modular Kitchen</a></li>
+                    <li><a href="services.html">Wardrobes</a></li>
+                    <li><a href="services.html">Living Rooms</a></li>
+                    <li><a href="services.html">Full Home Interiors</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>📍 Kariyambadi, Meenangadi – Wayanad – PIN 673591</p>
+                <p>📞 <a href="tel:+918590428136">+91 8590428136</a></p>
+                <p>✉️ <a href="mailto:gkinteriors@gmail.com">gkinteriors@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GK Interiors. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Sticky WhatsApp -->
+    <a href="https://wa.me/918590428136?text=Hi, need help with interiors." class="sticky-whatsapp" target="_blank"
+        aria-label="Chat on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple Filter Logic for Projects Page
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        function applyFilter(filterValue) {
+            // Update buttons
+            filterBtns.forEach(b => {
+                if (b.getAttribute('data-filter') === filterValue) {
+                    b.classList.add('active');
+                } else {
+                    b.classList.remove('active');
+                }
+            });
+
+            // Filter items
+            projectItems.forEach(item => {
+                const categories = item.getAttribute('data-category');
+                const isFeatured = item.getAttribute('data-featured') === 'true';
+
+                // If filter is 'all', show ONLY featured items
+                if (filterValue === 'all') {
+                    if (isFeatured) {
+                        item.classList.remove('hidden');
+                        item.style.animation = 'fadeIn 0.5s ease forwards';
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                }
+                // If filter matches category, show ALL items of that category (featured or not)
+                else if (categories && categories.includes(filterValue)) {
+                    item.classList.remove('hidden');
+                    item.style.animation = 'fadeIn 0.5s ease forwards';
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filterValue = btn.getAttribute('data-filter');
+                applyFilter(filterValue);
+                // Optional: Update URL without reload
+                const newUrl = new URL(window.location);
+                newUrl.searchParams.set('filter', filterValue);
+                window.history.pushState({}, '', newUrl);
+            });
+        });
+
+        // Check URL params on load
+        const urlParams = new URLSearchParams(window.location.search);
+        const activeFilter = urlParams.get('filter');
+        if (activeFilter) {
+            applyFilter(activeFilter);
+        } else {
+            // Default to 'all' (only featured)
+            applyFilter('all');
+        }
+    </script>
+</body>
+
+</html>

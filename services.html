@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | GK Interiors</title>
+    <meta name="description"
+        content="Expert interior design services including modular kitchens, wardrobes, living rooms, and full home execution.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .service-detail-block {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 80px;
+        }
+
+        .service-detail-block:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .service-detail-image {
+            flex: 1;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .service-detail-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-detail-block:hover .service-detail-image img {
+            transform: scale(1.05);
+        }
+
+        .service-detail-content {
+            flex: 1;
+        }
+
+        .service-detail-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--color-accent);
+        }
+
+        .service-features {
+            list-style: disc;
+            padding-left: 20px;
+            margin-bottom: 30px;
+            color: var(--color-text-muted);
+        }
+
+        .service-features li {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 992px) {
+
+            .service-detail-block,
+            .service-detail-block:nth-child(even) {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .service-detail-image {
+                width: 100%;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header (Same as index) -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="GK Interiors" class="logo-img">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="https://wa.me/918590428136?text=Hi, I am interested in a free consultation."
+                class="btn btn-gold header-cta" target="_blank">Get Free Consultation</a>
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <button class="mobile-close" aria-label="Close Menu">&times;</button>
+        <ul class="mobile-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header section-padding" style="padding-top: 150px; padding-bottom: 50px; text-align: center;">
+        <div class="container">
+            <h1 class="page-title">Our Services</h1>
+            <p class="page-subtitle">Comprehensive interior design solutions tailored to your lifestyle.</p>
+        </div>
+    </section>
+
+    <!-- Services Details -->
+    <section class="services-details section-padding">
+        <div class="container">
+
+            <!-- Service 1 -->
+            <div class="service-detail-block">
+                <div class="service-detail-image">
+                    <img src="kitchen1.jpg" alt="Modular Kitchen" loading="lazy">
+                </div>
+                <div class="service-detail-content">
+                    <h2>Modular Kitchens</h2>
+                    <p>Experience the perfect blend of functionality and aesthetics with our custom-designed modular
+                        kitchens. Built for durability and style.</p>
+                    <ul class="service-features">
+                        <li>Ergonomic designs for maximum efficiency</li>
+                        <li>Waterproof and termite-proof materials</li>
+                        <li>High-quality fittings (Hettich/Hafele)</li>
+                        <li>Wide range of finishes: Acrylic, PU, Laminate</li>
+                    </ul>
+                    <a href="https://wa.me/918590428136?text=I'm interested in a Modular Kitchen design."
+                        class="btn btn-primary" target="_blank">Get Kitchen Quote</a>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-detail-block">
+                <div class="service-detail-image">
+                    <img src="wardrobe1.jpg" alt="Wardrobes" loading="lazy">
+                </div>
+                <div class="service-detail-content">
+                    <h2>Wardrobes & Storage</h2>
+                    <p>Maximize your storage with our sleek and spacious wardrobe solutions, designed to fit your room
+                        perfectly.</p>
+                    <ul class="service-features">
+                        <li>Sliding and hinged door options</li>
+                        <li>Floor-to-ceiling designs for extra space</li>
+                        <li>Customizable internal compartments</li>
+                        <li>Integrated lighting and mirror options</li>
+                    </ul>
+                    <a href="https://wa.me/918590428136?text=I'm interested in Wardrobe designs."
+                        class="btn btn-primary" target="_blank">Get Wardrobe Quote</a>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-detail-block">
+                <div class="service-detail-image">
+                    <img src="livingmain.jpg" alt="Living Room" loading="lazy">
+                </div>
+                <div class="service-detail-content">
+                    <h2>Living Room Interiors</h2>
+                    <p>Create a lasting impression with a living room that reflects your personality and offers ultimate
+                        comfort.</p>
+                    <ul class="service-features">
+                        <li>Bespoke TV units and entertainment centers</li>
+                        <li>Designer wall paneling and textures</li>
+                        <li>Custom furniture selection and layout</li>
+                        <li>Ambient lighting design</li>
+                    </ul>
+                    <a href="https://wa.me/918590428136?text=I'm interested in Living Room interiors."
+                        class="btn btn-primary" target="_blank">Get Living Room Quote</a>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-detail-block">
+                <div class="service-detail-image">
+                    <img src="bedroom1.jpg" alt="Bedroom" loading="lazy">
+                </div>
+                <div class="service-detail-content">
+                    <h2>Bedroom Interiors</h2>
+                    <p>Transform your bedroom into a serene sanctuary with our personalized design solutions.</p>
+                    <ul class="service-features">
+                        <li>Space planning for comfort and flow</li>
+                        <li>Cozy and mood-enhancing lighting</li>
+                        <li>Custom headboards and bed designs</li>
+                        <li>Color consultation for relaxation</li>
+                    </ul>
+                    <a href="https://wa.me/918590428136?text=I'm interested in Bedroom interiors."
+                        class="btn btn-primary" target="_blank">Get Bedroom Quote</a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Footer (Same as index) -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>
+                    <a href="index.html" class="logo">
+                        <img src="logo.png" alt="GK Interiors" class="logo-img">
+                    </a>
+                </h3>
+                <p>Creating timeless spaces that reflect your personality. Your dream, our execution.</p>
+
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="services.html">Modular Kitchen</a></li>
+                    <li><a href="services.html">Wardrobes</a></li>
+                    <li><a href="services.html">Living Rooms</a></li>
+                    <li><a href="services.html">Full Home Interiors</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>📍 Kariyambadi, Meenangadi – Wayanad – PIN 673591</p>
+                <p>📞 <a href="tel:+918590428136">+91 8590428136</a></p>
+                <p>✉️ <a href="mailto:gkinteriors@gmail.com">gkinteriors@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GK Interiors. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Sticky WhatsApp -->
+    <a href="https://wa.me/918590428136?text=Hi, need help with interiors." class="sticky-whatsapp" target="_blank"
+        aria-label="Chat on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
